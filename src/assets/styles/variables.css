@@ -1,0 +1,19 @@
+:root {
+  --white: #dddddd;
+  --green: #2eb086;
+  --orange: #ff7f3f;
+  --dark-grey: #393e46;
+  --grey: #8b8a8a;
+  --bg-dark: #212121;
+  --grey-light: #d3dedc;
+}
+
+.night-mode {
+  --key-bg: var(--grey);
+  --key-correct: var(--green);
+  --key-present: var(--orange);
+  --key-absent: var(--dark-grey);
+  --body-bg: var(--bg-dark);
+  --text-color: var(--white);
+  --border-color: var(--grey-light);
+}

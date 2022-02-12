@@ -1,0 +1,15 @@
+.game {
+  height: 100vh;
+  background-color: var(--body-bg);
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.game .game-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}

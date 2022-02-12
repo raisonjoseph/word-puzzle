@@ -1,0 +1,54 @@
+.key {
+   display: flex;
+   flex: 1;
+   height: 58px;
+   align-items: center;
+   justify-content: center;
+   color: var(--white);
+   font-size: 1rem;
+   font-weight: 600;
+   border: none;
+   border-radius: 4px;
+   background-color: var(--key-bg);
+   margin: 4px;
+   padding: 0px 4px;
+}
+.key i {
+   font-size: 1.2rem;
+}
+
+.spacer {
+   flex: 0.7;
+}
+
+.key:hover,
+.key:focus,
+.key:active {
+   color: var(--white);
+   outline: none !important;
+   border: none !important;
+   background-color: var(--key-bg);
+}
+
+.key.correct {
+   background-color: var(--key-correct);
+}
+.key.absent {
+   background-color: var(--key-absent);
+}
+.key.present {
+   background-color: var(--key-present);
+}
+
+.key.correct:hover {
+   background-color: var(--key-correct);
+   color: var(--white);
+}
+.key.absent:hover {
+   background-color: var(--key-absent);
+   color: var(--white);
+}
+.key.present:hover {
+   background-color: var(--key-present);
+   color: var(--white);
+}
