@@ -33,7 +33,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
    }, [onKeyPress, onEnter, onDelete]);
 
    const handleOnKeyPress = (value: string) => {
-      onKeyPress(value);
+      onKeyPress(value.toUpperCase());
    };
    return (
       <div className="keyboard">

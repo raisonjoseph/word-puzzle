@@ -1,19 +1,26 @@
 :root {
-  --white: #dddddd;
-  --green: #2eb086;
-  --orange: #ff7f3f;
-  --dark-grey: #393e46;
-  --grey: #8b8a8a;
-  --bg-dark: #212121;
-  --grey-light: #d3dedc;
+   --white: #dddddd;
+   --green: #2eb086;
+   --orange: #ff7f3f;
+   --dark-grey: #393e46;
+   --darker-grey: #2c323b;
+   --grey: #8b8a8a;
+   --bg-dark: #212121;
+   --grey-light: #d3dedc;
+   --dark: #4f4e50;
 }
 
 .night-mode {
-  --key-bg: var(--grey);
-  --key-correct: var(--green);
-  --key-present: var(--orange);
-  --key-absent: var(--dark-grey);
-  --body-bg: var(--bg-dark);
-  --text-color: var(--white);
-  --border-color: var(--grey-light);
+   --key-bg: var(--grey);
+   --key-correct: var(--green);
+   --key-present: var(--orange);
+   --key-absent: var(--dark-grey);
+   --body-bg: var(--bg-dark);
+   --text-color: var(--white);
+   --border-color: var(--grey-light);
+   --cell-border: var(--dark);
+   --cell-bg-default: var(--darker-grey);
+   --cell-correct: var(--green);
+   --cell-present: var(--orange);
+   --cell-absent: var(--darker-grey);
 }
