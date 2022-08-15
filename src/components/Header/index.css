@@ -1,0 +1,44 @@
+.header {
+   width: 100%;
+   height: 64px;
+   border-bottom: 1px solid var(--border-dark);
+   position: relative;
+   background-color: #1d1d1d;
+}
+
+.header .container {
+   display: inline;
+   text-align: center;
+}
+.header .container .title {
+   font-size: 1.5rem;
+   text-align: center;
+   color: var(--white);
+   max-width: fit-content;
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.header .container .menu {
+   float: right;
+   display: flex;
+   align-items: center;
+   max-width: 120px;
+   height: 100%;
+   margin-right: 8px;
+}
+
+.header .container .menu .menu-item {
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background: none;
+   color: var(--white);
+}
+.header .container .menu .menu-item:where(:focus, :hover) {
+   border: none;
+   outline: none;
+}

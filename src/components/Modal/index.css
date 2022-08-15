@@ -1,0 +1,66 @@
+.modal h1 {
+   font-size: 20px;
+}
+.modal button {
+   margin: 0px auto;
+   margin-top: 20px;
+}
+.modal-overlay {
+   position: fixed;
+   top: 0;
+   pointer-events: none;
+   left: 0px;
+   width: 100vw;
+   height: 100vh;
+   z-index: 100;
+   opacity: 0;
+   transition: 0.3s;
+   visibility: hidden;
+}
+
+.modal-overlay.active {
+   opacity: 1;
+   pointer-events: auto;
+   visibility: visible;
+}
+
+.modal-overlay .modal {
+   display: block;
+   background-color: var(--bg-dark);
+   max-width: 500px;
+   width: 90%;
+   max-height: 100%;
+   overflow-y: auto;
+   box-sizing: border-box;
+   border-radius: 5px;
+   border: 1px solid var(--border-dark);
+   padding: 20px;
+   position: absolute;
+   top: 70%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   transition: 0.3s;
+   color: var(--white);
+   font-size: 0.875rem;
+}
+.modal-overlay.active .modal {
+   top: 50%;
+}
+
+.modal .head {
+   font-size: 1.25rem;
+   font-weight: 600;
+   color: var(--white);
+   text-transform: uppercase;
+   text-align: center;
+   position: relative;
+}
+
+.modal .head .close {
+   position: absolute;
+   top: 2px;
+   right: 0px;
+   cursor: pointer;
+   color: var(--white);
+   font-weight: 800;
+}

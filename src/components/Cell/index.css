@@ -12,6 +12,12 @@
    color: var(--white);
    margin: 4px;
 }
+.cell.example {
+   width: 32px;
+   height: 32px;
+   font-size: 1.25rem;
+   flex: 0 1 auto;
+}
 
 .cell.correct {
    background-color: var(--cell-correct);

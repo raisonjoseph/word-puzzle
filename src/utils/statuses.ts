@@ -11,7 +11,7 @@ export const getKeyStatus = (guesses: string[], solution: string) => {
    } = {};
    const splitSolution = solution.split("");
    guesses.forEach((guess) => {
-      guess.split("").forEach((letter, index) => {
+      guess?.split("").forEach((letter, index) => {
          const letterIndex = splitSolution.indexOf(letter);
          // Correct cases
          if (letterIndex === index) {

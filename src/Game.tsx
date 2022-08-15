@@ -1,11 +1,15 @@
 import React, { useMemo, useState } from "react";
-import "./game.css";
+import "./assets/styles/game.css";
 import Keyboard from "./components/Keyboard";
 import { MAX_GUESSES, MAX_LENGTH, REVEAL_TIME_MS } from "./utils/constants";
 import { checkIsGameWon, getKeyStatus } from "./utils/statuses";
 import Grid from "./components/Grid";
+import { getTodaySolution } from "./utils/words";
+import Header from "./components/Header";
+import Modal from "./components/Modal";
+import Help from "./components/Help";
 
-const solution = "APPLES";
+const solution = getTodaySolution();
 
 function Game() {
    const [isGameWon, setIsGameWon] = useState(false);
@@ -13,6 +17,7 @@ function Game() {
    const [guesses, setGuesses] = useState<string[]>([]);
    const [currentGuess, setGuess] = useState<string>("");
    const [isRevealing, setIsRevealing] = useState(false);
+   const [showHelpModal, setShowHelpModal] = useState(false);
 
    const keyStatus = useMemo(() => getKeyStatus(guesses, solution), [guesses]);
 
@@ -49,8 +54,19 @@ function Game() {
       if (currentGuess.length !== 0) setGuess(currentGuess.slice(0, -1));
    };
 
+   const onHelpClick = () => setShowHelpModal(true);
+   const onHelpModalClose = () => setShowHelpModal(false);
+
    return (
-      <div className="game night-mode">
+      <main className="game night-mode">
+         <Header onHelpClick={onHelpClick} />
+         <Modal
+            title="How to play"
+            onClose={onHelpModalClose}
+            open={showHelpModal}
+         >
+            <Help />
+         </Modal>
          <div className="game-container">
             <Grid
                guesses={guesses}
@@ -64,7 +80,7 @@ function Game() {
                onDelete={handleDelete}
             />
          </div>
-      </div>
+      </main>
    );
 }
 

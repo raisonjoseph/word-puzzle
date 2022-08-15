@@ -1,0 +1,10 @@
+.help .instructions {
+   border-bottom: 2px solid var(--border-dark);
+}
+.help .examples {
+}
+
+.help .examples .example .words {
+   display: flex;
+   margin-left: -4px;
+}

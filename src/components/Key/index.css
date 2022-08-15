@@ -12,6 +12,7 @@
    background-color: var(--key-bg);
    margin: 4px;
    padding: 0px 4px;
+   cursor: pointer;
 }
 .key i {
    font-size: 1.2rem;

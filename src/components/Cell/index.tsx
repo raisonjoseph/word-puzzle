@@ -8,12 +8,14 @@ interface CellProps {
    value: string;
    isCompletedCell?: boolean;
    position?: number;
+   isExample?: boolean;
 }
 
 const Cell: React.FC<CellProps> = ({
    status = "",
    value,
    isCompletedCell = false,
+   isExample,
    position = 0,
 }) => {
    const isFillingCell = value && !isCompletedCell;
@@ -22,6 +24,7 @@ const Cell: React.FC<CellProps> = ({
    const className = clsx("cell", status, {
       "cell-fill": isFillingCell,
       active: isFillingCell,
+      example: isExample,
    });
 
    return (
